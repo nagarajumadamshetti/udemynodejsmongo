@@ -1,7 +1,7 @@
 const controller= require('../controller/controller');
 const express =require('express');
 const  router = express.Router();
-
+console.log("Router reached");
 /* GET home page. */
 router.get('/tour/read',controller.reading);
 router.post('/tour/insert',controller.created);

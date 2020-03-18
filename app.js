@@ -16,15 +16,9 @@ app.use('/', routes);
   useFindAndModify:false
 });
 
-// catch 404 and forward to error handler
-app.use((req, res, next)=> {
-  next(createError(404));
-});
-
 // error handler
 app.use((err, req, res, next)=> {
- 
-  res.status(err.status || 400).json({
+  res.status(400).json({
     error:err
   });
 });
